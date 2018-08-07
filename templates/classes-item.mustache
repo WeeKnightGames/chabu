@@ -1,0 +1,58 @@
+---
+title: "{{name}}"
+anchor: "{{name:anchor}}"
+weight:
+---
+
+{{fluff}}
+
+**Source.** {{source}}
+
+**Role.** {{role}}
+
+**Key Ability Score.** {{key ability score}}
+
+**Alignment.** {{alignment}}
+
+**Hit Die.** {{hit die}}
+
+**Recoveries.** {{recoveries}}
+
+**Prerequisites.** {{^prerequisites}} None. {{/prerequisites}}
+
+{{#prerequisites}}
+- {{name}}
+{{/prerequisites}}
+
+{{#proficiencies}}
+**Proficiencies.**
+
+- Equipment. {{^equipment}} None. {{/equipment}}
+{{#equipment}}
+  - {{name}}
+{{/equipment}}
+- Implements. {{^implements}} None. {{/implements}}
+{{#implements}}
+  - {{name}}
+{{/implements}}
+- Skills. Choose {{skills.choose}} of
+{{#skills.of}}
+  - {{name}}
+{{/skills.of}}
+- Tools. {{^tools}} None. {{/tools}}
+{{#tools}}
+  - {{name}}
+{{/tools}}
+{{/proficiencies}}
+
+**Features.**
+
+{{#features}}
+  - *{{name}}.* {{fluff}}
+  {{#choose}}
+  Choose {{count}} of
+    {{#of}}
+      - {{name}}
+    {{/of}}
+  {{/choose}}
+{{/features}}

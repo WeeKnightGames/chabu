@@ -1,0 +1,7 @@
+name "chabu"
+description "chabu - character builder library and tools"
+authors "Matthew O'Connor"
+copyright "Copyright © 2018, Matthew O'Connor"
+license "proprietary"
+dependency "dyaml" version="~>0.7.0"
+dependency "mustache-d" version="~>0.1.3"

@@ -1,0 +1,23 @@
+---
+title: "{{name}}"
+anchor: "{{name:anchor}}"
+weight:
+---
+
+{{fluff}}
+
+{{#proficiencies}}
+
+
+**Proficiencies.**
+
+- Skills. {{^skills}} None. {{/skills}} {{skills.fluff}}
+{{#skills.of}}
+  - {{name}}
+{{/skills.of}}
+- Tools. {{^tools}} None. {{/tools}} {{tools.fluff}}
+{{#tools.of}}
+  - {{name}}
+{{/tools.of}}
+
+{{/proficiencies}}

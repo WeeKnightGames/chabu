@@ -1,0 +1,14 @@
+.dub
+docs.json
+__dummy.html
+docs/
+chabu.so
+chabu.dylib
+chabu.dll
+chabu.a
+chabu.lib
+chabu-test-*
+*.exe
+*.o
+*.obj
+*.lst
