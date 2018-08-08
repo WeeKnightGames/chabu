@@ -1,0 +1,16 @@
+---
+title: "Feats"
+anchor: "feats"
+weight: 2000
+---
+
+{{#feats}}
+
+**{{name}}**
+: **Prerequisites.** {{^prerequisites}} None. {{/prerequisites}}
+  {{#prerequisites}}
+  - {{name}}
+  {{/prerequisites}}
+
+- *{{tier}}.* {{fluff}}
+{{/feats}}

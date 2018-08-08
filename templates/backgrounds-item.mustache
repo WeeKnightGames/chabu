@@ -6,16 +6,20 @@ weight:
 
 {{fluff}}
 
+**Ability Score Increase.** {{ability score increase.fluff}} {{^ability score increase}} None. {{/ability score increase}}
+
+{{#ability score increase.of}}
+- {{name}}
+{{/ability score increase.of}}
+
 {{#proficiencies}}
-
-
 **Proficiencies.**
 
-- Skills. {{^skills}} None. {{/skills}} {{skills.fluff}}
+- *Skills.* {{^skills}} None. {{/skills}} {{skills.fluff}}
 {{#skills.of}}
   - {{name}}
 {{/skills.of}}
-- Tools. {{^tools}} None. {{/tools}} {{tools.fluff}}
+- *Tools.* {{^tools}} None. {{/tools}} {{tools.fluff}}
 {{#tools.of}}
   - {{name}}
 {{/tools.of}}
