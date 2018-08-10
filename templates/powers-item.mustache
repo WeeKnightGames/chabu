@@ -4,7 +4,7 @@ anchor: "{{name:anchor}}"
 weight: 800
 ---
 
-{{#powers}}
+{{#attack powers}}
 - {{name}}. *{{fluff}}*
   - {{keywords}}
   - Level {{level}}, {{rarity}}
@@ -14,4 +14,14 @@ weight: 800
   - Attack: {{attack}}
   - Hit: {{hit}}
   - Miss: {{miss}}
-{{/powers}}
+{{/attack powers}}
+
+{{#utility powers}}
+- {{name}}. *{{fluff}}*
+  - {{keywords}}
+  - Level {{level}}, {{rarity}}
+  - {{action}}
+  - Range: {{range}}
+  - Target: {{target}}
+  - Effect: {{effect}}
+{{/utility powers}}
