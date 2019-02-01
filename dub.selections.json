@@ -1,6 +1,7 @@
 {
 	"fileVersion": 1,
 	"versions": {
+		"docopt": "0.6.1-b.6",
 		"dyaml": "0.7.0",
 		"mustache-d": "0.1.3",
 		"tinyendian": "0.2.0"
