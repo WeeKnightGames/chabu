@@ -276,9 +276,9 @@ int main(string[] args) {
       File(site ~ "/config.toml", "w")
         .rawWrite(mustache.render("config.toml", context));
 
-      (site ~ "/templates/").mkdirRecurse;
-      "templates/license.mustache".copy(site ~ "/templates/license.mustache");
-      "templates/getting-started.mustache".copy(site ~ "/templates/getting-started.mustache");
+      (name ~ "/templates/").mkdirRecurse;
+      "templates/license.mustache".copy(name ~ "/templates/license.mustache");
+      "templates/getting-started.mustache".copy(name ~ "/templates/getting-started.mustache");
 
       //exe(["git", "add", "."], name);
       //exe(["git", "commit", "-m", "Initial commit."], name);
@@ -316,18 +316,18 @@ int main(string[] args) {
         auto db = base.loadAll;
         auto json = db.toJSON;
         json = json.addAnchors.canonize;
-        json.toPrettyString.writeln;
+        //json.toPrettyString.writeln;
 
         Mustache mustache;
         mustache.path = templates;
         foreach (string k, elt; json) {
-          k.writeln;
+          //k.writeln;
           if ((mustache.path ~ "/" ~ k ~ ".mustache").exists) {
             (content ~ k).mkdirRecurse;
             auto f = File(content ~ k ~ "/_index.md", "w");
             f.rawWrite(mustache.render(k, json.toMustacheContext));
           } else {
-            (mustache.path ~ "/" ~ k ~ ".mustache does not exist").writeln;
+            //(mustache.path ~ "/" ~ k ~ ".mustache does not exist").writeln;
           }
           if ((mustache.path ~ "/" ~ k ~ "-item.mustache").exists) {
             (content ~ k).mkdirRecurse;
@@ -336,7 +336,7 @@ int main(string[] args) {
               f.rawWrite(mustache.render(k ~ "-item", item.toMustacheContext));
             }
           } else {
-            (mustache.path ~ "/" ~ k ~ "-item.mustache does not exist").writeln;
+            //(mustache.path ~ "/" ~ k ~ "-item.mustache does not exist").writeln;
           }
         }
       } else {
